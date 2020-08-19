@@ -681,7 +681,7 @@ input[type="text"]:focus, input[type="number"]:focus {
 }
 
 .btn-link {
-  background-color: transparent;
+  background-color: #484848;
 }
 
 h4 {
