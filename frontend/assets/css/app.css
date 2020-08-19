@@ -1,0 +1,689 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+  background-color: #F3F5F6;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.keyboard-key {
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  box-sizing: border-box;
+  border: 3px solid #F3F5F6;
+}
+
+.error {
+  border: 3px solid #f45342;
+}
+
+.keyboard-key:hover:before {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  top:0;
+  right:0;
+  border-radius: 7px;
+  position: absolute;
+  background-color: rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.keyboard-key.active::before {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  top:0;
+  right:0;
+  border-radius: 7px;
+  position: absolute;
+  background-color: rgba(0,0,0,0.25);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.k100 {
+  width: 50px;
+  height: 50px;
+}
+
+.k125 {
+  width: 62.5px;
+  height: 50px;
+}
+
+.k150 {
+  width: 75px;
+  height: 50px;
+}
+
+.k175 {
+  width: 87.5px;
+  height: 50px;
+}
+
+.k175stepped {
+  width: 62.5px;
+  height: 50px;
+  margin-right: 25px;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+}
+.k175stepped:hover:before, .active.k175stepped:before {
+  border-radius: 7px 0 0 7px;
+}
+
+.k175stepped:after {
+    width: 22px;
+    height: 44px;
+    background-color: #eaeaea;
+    top: 0;
+    right: -25px;
+    content: ' ';
+    position: absolute;
+    border-radius: 0 10px 10px 0;
+    z-index: -1;
+    border-right: 3px solid #F3F5F6;
+}
+.error.k175stepped:after {
+    top: -3px;
+    border: 3px solid #f45342;
+}
+.k175stepped:hover:after {
+  background-color: #CBCBCB;
+}
+.active.k175stepped:after {
+  background-color: #B3B3B3;
+}
+/* tapkey */
+.tapkey.k175stepped:after {
+  background-color: #7BCB7B;
+}
+.tapkey.k175stepped:hover:after {
+  background-color: #6CB26C;
+}
+.active.tapkey.k175stepped:after {
+  background-color: #5E9B5E;
+}
+/* toggle */
+.toggle.k175stepped:after {
+  background-color: #D9D9BF;
+}
+.toggle.k175stepped:hover:after {
+  background-color: #BFBFA8;
+}
+.active.toggle.k175stepped:after {
+  background-color: #A6A692;
+}
+/* momentary */
+.momentary.k175stepped:after {
+  background-color: #D9A3AD;
+}
+.momentary.k175stepped:hover:after {
+  background-color: #BF9098;
+}
+.active.momentary.k175stepped:after {
+  background-color: #A67D84;
+}
+/* modkey */
+.modkey.k175stepped:after {
+  background-color: #C4C4D5;
+}
+.modkey.k175stepped:hover:after {
+  background-color: #ACACBB;
+}
+.active.modkey.k175stepped:after {
+  background-color: #9696A3;
+}
+/* combokey */
+.combokey.k175stepped:after {
+  background-color: #93B8C4;
+}
+.combokey.k175stepped:hover:after {
+  background-color: #82A2AC;
+}
+.active.combokey.k175stepped:after {
+  background-color: #718D96;
+}
+/* direct */
+.direct.k175stepped:after {
+  background-color: #CC6D6D;
+}
+.direct.k175stepped:hover:after {
+  background-color: #B46060;
+}
+.active.direct.k175stepped:after {
+  background-color: #9C5353;
+}
+/* taptoggle */
+.taptoggle.k175stepped:after {
+  background-color: #6CD9B4;
+}
+.taptoggle.k175stepped:hover:after {
+  background-color: #5FBF9F;
+}
+.active.taptoggle.k175stepped:after {
+  background-color: #53A68A;
+}
+/* setdefaultlayer */
+.setdefaultlayer.k175stepped:after {
+  background-color: #D9BA9D;
+}
+.setdefaultlayer.k175stepped:hover:after {
+  background-color: #BFA38B;
+}
+.active.setdefaultlayer.k175stepped:after {
+  background-color: #A68E78;
+}
+
+.k200 {
+  width: 100px;
+  height: 50px;
+}
+
+.k225 {
+  width: 112.5px;
+  height: 50px;
+}
+
+.k275 {
+  width: 137.5px;
+  height: 50px;
+}
+
+.k200v {
+  width: 50px;
+  height: 100px;
+  margin-bottom: -56px
+}
+
+.k625 {
+    width: 312.5px;
+    height: 50px;
+}
+
+.k700 {
+    width: 350px;
+    height: 50px;
+}
+
+.kISO {
+  width: 75px;
+  height: 50px;
+  border-radius: 10px 10px 0 10px;
+}
+.kISO::after {
+  content: ' ';
+  width: 56.5px;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+  border-radius: 0 0 10px 10px;
+  bottom: -50px;
+  right: 0px;
+  z-index: 0;
+}
+
+.error.kISO:after {
+    border: 3px solid #f45342;
+    border-top: none;
+    right: -3px;
+    height: 47px;
+}
+
+.kJIS {
+  width: 75px;
+  height: 50px;
+  border-radius: 10px 10px 0 10px;
+}
+.kJIS::after {
+  content: ' ';
+  width: 44px;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+  border-radius: 0 0 10px 10px;
+  bottom: -50px;
+  right: 0px;
+  z-index: 0;
+}
+.error.kJIS:after {
+    border: 3px solid #f45342;
+    border-top: none;
+    right: -3px;
+    height: 47px;
+}
+
+.kISO:hover:after, .kJIS:hover:after {
+    background-color: #d9d9d9;
+}
+.momentary.kISO:hover:after, .momentary.kJIS:hover:after {
+    background-color: #D9A3AD;
+}
+.toggle.kISO:hover:after, .toggle.kJIS:hover:after {
+    background-color: #D9D9BF;
+}
+.modkey.kISO:hover:after, .modkey.kJIS:hover:after {
+    background-color: #C4C4D5;
+}
+.tapkey.kISO:hover:after, .tapkey.kJIS:hover:after {
+    background-color: #7BCB7B;
+}
+.combokey.kISO:hover:after, .combokey.kJIS:hover:after {
+    background-color: #93B8C4;
+}
+.direct.kISO:hover:after, .direct.kJIS:hover:after {
+    background-color: #CC6D6D;
+}
+.taptoggle.kISO:hover:after, .taptoggle.kJIS:hover:after {
+    background-color: #6CD9B4;
+}
+.setdefaultlayer.kISO:hover:after, .setdefaultlayer.kJIS:hover:after {
+    background-color: #D9BA9D;
+}
+
+.active.kISO:after, .active.kJIS:after {
+    background-color: #BFBFBF;
+}
+.active.momentary.kISO:after, .active.momentary.kJIS:after {
+    background-color: #BF9098;
+}
+.active.toggle.kISO:after, .active.toggle.kJIS:after {
+    background-color: #BFBFA8;
+}
+.active.modkey.kISO:after, .active.modkey.kJIS:after {
+    background-color: #ACACBB;
+}
+.active.tapkey.kISO:after, .active.tapkey.kJIS:after {
+    background-color: #6CB26C;
+}
+.active.combokey.kISO:after, .active.combokey.kJIS:after {
+    background-color: #82A2AC;
+}
+.active.direct.kISO:after, .active.direct.kJIS:after {
+    background-color: #B46060;
+}
+.active.taptoggle.kISO:after, .active.taptoggle.kJIS:after {
+    background-color: #5FBF9F;
+}
+.active.setdefaultlayer.kISO:after, .active.setdefaultlayer.kJIS:after {
+    background-color: #BFA38B;
+}
+
+.kISO:hover:before, .active.kISO:before, .kJIS:hover:before, .active.kJIS:before {
+  border-radius: 7px 7px 0 7px;
+}
+
+.context-menu-shell {
+  position: absolute;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 0 10px;
+  z-index: 10;
+  width: 700px;
+  height: 300px;
+  left: 10px;
+  background-color: #eee;
+}
+.context-menu {
+  width:100%;
+  height:100%;
+  overflow-y: scroll;
+  float: left;
+  margin-top: -24px;
+}
+
+.context-menu-shell:focus {
+  outline: none;
+}
+
+.context-menu-shell .close-button {
+        position: relative;
+    float: right;
+    margin-top: -1px;
+    margin-right: -11px;
+    z-index: 2;
+    width: 25px;
+    height: 25px;
+    background-color: inherit;
+    border-radius: 0 5px 0 5px;
+    border: 1px solid #333;
+}
+.context-menu-shell .close-button:hover {
+  background-color: #bbb;
+}
+.context-menu-shell .close-button:focus {
+  outline: none;
+}
+
+.context-menu .context-panel div {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: seashell;
+    height: 15px;
+    width: 15px;
+    margin: 2px;
+    cursor: default;
+    vertical-align: top;
+}
+
+.context-menu .context-panel .large-context-key {
+  width: 30px;
+}
+
+.context-menu .context-panel .extra-large-context-key {
+  width: 60px;
+}
+
+.context-menu .context-panel div:hover {
+    background-color: lightgray;
+}
+
+.context-menu .context-panel div.active {
+  background-color: gray;
+}
+
+.context-menu .context-panel div:hover .tooltiptext {
+    display: block;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid #333;
+    border-radius: 5px;
+    z-index: 10;
+    position: absolute;
+    width: 410px;
+    color: #333;
+    top:-1px;
+    left:-1px;
+}
+
+.tooltiptext {
+    display: none;
+}
+
+.context-menu h3 {
+  //margin-top: 0;
+}
+
+.momentary, .momentary:after {
+  background-color: pink;
+}
+
+.toggle, .toggle:after {
+  background-color: lightyellow;
+}
+
+.tapkey, .tapkey:after {
+  background-color: lightgreen;
+}
+
+.modkey, .modkey:after {
+  background-color: lavender;
+}
+
+.combokey, .combokey:after {
+  background-color: lightblue;
+}
+
+.direct, .direct:after {
+  background-color: lightcoral;
+}
+
+.taptoggle, .taptoggle:after {
+  background-color: aquamarine;
+}
+
+.setdefaultlayer, .setdefaultlayer:after {
+  background-color: peachpuff;
+}
+
+.split-panel {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.section-header {
+  background-color: white;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+.layer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.zonebox {
+    width: 700px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.zonebox select {
+    width: 150px;
+}
+.zone {
+    padding: 5px 5px 5px 1%;
+}
+.zone label {
+    width: 20%;
+    display: inline-block;
+}
+.subzone {
+    padding: 5px 5px 5px 6%;
+}
+.subzone label {
+    width: 15%;
+    display: inline-block;
+}
+.zone-hover, .zone-hover.kISO:after, .zone-hover.kJIS:after, .zone-hover.k175stepped:after {
+    background-color: #333;
+}
+.zonebox span {
+    float: right;
+}
+.zonebox h3 {
+    background-color: lightgray;
+    padding: 5px;
+    margin: 0;
+}
+
+.s025 {
+    margin-right: 12.5px;
+}
+
+.s050 {
+    margin-right: 25px;
+}
+
+.ls050 {
+  margin-left: 25px;
+}
+
+.ls100 {
+  margin-left: 50px;
+}
+
+.s100 {
+    margin-right: 50px;
+}
+
+.s200 {
+    margin-right: 100px;
+}
+
+.s125 {
+    margin-right: 62.5px;
+}
+
+.s350 {
+    margin-right: 175px;
+}
+
+.vs050 {
+    margin-top: 25px;
+}
+
+.saved-layouts li {
+  padding: 5px;
+  width: 100%;
+}
+
+.saved-layouts span {
+  float: none;
+  width: 70%;
+  display: inline-block;
+}
+
+.saved-layouts button {
+  width: 14%;
+}
+
+.saved-layouts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inputfile {
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+form {
+  display: inline-block
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  height: 26px;
+  font-size: 14px;
+}
+
+a.btn {
+  text-decoration: none;
+}
+
+.btn {
+  border-radius: 5px;
+  border: none;
+  height: 26px;
+  font-size: 14px;
+  padding: 3px 7px 4px;
+}
+
+button[disabled], button[disabled]:hover {
+  background-color: lightgray;
+  color: gray;
+}
+
+.btn-primary {
+  background-color: #428bca;
+  color: #eee;
+}
+.btn-primary:hover {
+  background-color: #3a7cb2;
+}
+
+.btn-secondary:hover {
+  background-color: #bbb;
+}
+
+.btn-warning {
+  background-color: #d9534f;
+  color: #eee;
+}
+
+.btn-warning:hover {
+  background-color: #bc4543;
+}
+
+input[type="text"], input[type="number"] {
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  height: 20px;
+}
+input[type="text"]:focus, input[type="number"]:focus {
+  outline: none;
+  border-color: #428bca;
+}
+
+.form-control {
+  padding: 5px 5px 5px 1%;
+}
+
+.form-control label {
+  width: 20%;
+  display: inline-block;
+}
+
+.toggle-control {
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  border: 1px solid #428bca;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.toggle-control.active {
+    background-color: #428bca;
+}
+
+.keyboard-key span {
+    display: block;
+}
+
+.led-preview {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.indicator-description {
+  display: inline-block;
+}
+
+.col-4 {
+  display: inline-block;
+  width: 33.33%;
+  vertical-align: top;
+  padding: 5px 15px;
+  box-sizing: border-box;
+}
+
+.btn-link {
+  background-color: transparent;
+}
+
+h4 {
+  display: inline-block;
+}
