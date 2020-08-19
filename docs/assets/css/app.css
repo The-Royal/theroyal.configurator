@@ -1,7 +1,7 @@
 body {
   font-family: 'Noto Sans', sans-serif;
   font-size: 12px;
-  background-color: #F3F5F6;
+  background-color: #737373;
 }
 
 .inline-block {
@@ -9,9 +9,9 @@ body {
 }
 
 .keyboard-key {
-  background-color: white;
-  border-radius: 10px;
-  padding: 5px;
+  background-color: #aeaeae;
+  border-radius: 15px;
+  padding: 4px;
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -83,7 +83,7 @@ body {
 .k175stepped:after {
     width: 22px;
     height: 44px;
-    background-color: #eaeaea;
+    background-color: #aeaeae;
     top: 0;
     right: -25px;
     content: ' ';
@@ -97,60 +97,60 @@ body {
     border: 3px solid #f45342;
 }
 .k175stepped:hover:after {
-  background-color: #CBCBCB;
+  background-color: #aeaeae;
 }
 .active.k175stepped:after {
-  background-color: #B3B3B3;
+  background-color: #aeaeae;
 }
 /* tapkey */
 .tapkey.k175stepped:after {
-  background-color: #7BCB7B;
+  background-color: #65c29c;
 }
 .tapkey.k175stepped:hover:after {
-  background-color: #6CB26C;
+  background-color: #65c29c;
 }
 .active.tapkey.k175stepped:after {
-  background-color: #5E9B5E;
+  background-color: #65c29c;
 }
 /* toggle */
 .toggle.k175stepped:after {
-  background-color: #D9D9BF;
+  background-color: #aeaeae;
 }
 .toggle.k175stepped:hover:after {
-  background-color: #BFBFA8;
+  background-color: #aeaeae;
 }
 .active.toggle.k175stepped:after {
-  background-color: #A6A692;
+  background-color: #aeaeae;
 }
 /* momentary */
 .momentary.k175stepped:after {
-  background-color: #D9A3AD;
+  background-color: #e16e6e;
 }
 .momentary.k175stepped:hover:after {
-  background-color: #BF9098;
+  background-color: #e16e6e;
 }
 .active.momentary.k175stepped:after {
-  background-color: #A67D84;
+  background-color: #e16e6e;
 }
 /* modkey */
 .modkey.k175stepped:after {
-  background-color: #C4C4D5;
+  background-color: #aeaeae;
 }
 .modkey.k175stepped:hover:after {
-  background-color: #ACACBB;
+  background-color: #aeaeae;
 }
 .active.modkey.k175stepped:after {
-  background-color: #9696A3;
+  background-color: #aeaeae;
 }
 /* combokey */
 .combokey.k175stepped:after {
-  background-color: #93B8C4;
+  background-color: #aeaeae;
 }
 .combokey.k175stepped:hover:after {
-  background-color: #82A2AC;
+  background-color: #aeaeae;
 }
 .active.combokey.k175stepped:after {
-  background-color: #718D96;
+  background-color: #aeaeae;
 }
 /* direct */
 .direct.k175stepped:after {
