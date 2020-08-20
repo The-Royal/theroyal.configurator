@@ -9,14 +9,14 @@ body {
 }
 
 .keyboard-key {
-  background-color: #aeaeae;
-  border-radius: 15px;
+  background-color: #808080;
+  border-radius: 5px;
   padding: 4px;
   display: inline-block;
   vertical-align: top;
   position: relative;
   box-sizing: border-box;
-  border: 3px solid #F3F5F6;
+  border: 3px solid #808080;
 }
 
 .error {
@@ -324,8 +324,8 @@ body {
 .context-menu-shell {
   position: absolute;
   border-radius: 5px;
-  border: 1px solid gray;
-  padding: 0 10px;
+  border: 1px solid #646464;
+  padding: 0 800px;
   z-index: 10;
   width: 700px;
   height: 300px;
@@ -357,7 +357,7 @@ body {
     border: 1px solid #333;
 }
 .context-menu-shell .close-button:hover {
-  background-color: #bbb;
+  background-color: ##646464;
 }
 .context-menu-shell .close-button:focus {
   outline: none;
@@ -367,7 +367,7 @@ body {
     display: inline-block;
     border-radius: 5px;
     padding: 5px;
-    background-color: seashell;
+    background-color: #646464;
     height: 15px;
     width: 15px;
     margin: 2px;
@@ -587,7 +587,7 @@ button {
 }
 
 a.btn {
-  text-decoration: none;
+  text-decoration: text-decoration-color: #ffffff;
 }
 
 .btn {
