@@ -77,11 +77,11 @@ sukari.zones = [
         choices: [
             {
                 code: 0,
-                name: 'Big-Space'
+                name: 'Big-Grid'
             },
             {
                 code: 1,
-                name: 'Grid'
+                name: 'Big-Space'
             }
         ]
     }
@@ -642,7 +642,7 @@ sukari.keymap = function() {
         layer.push(ks.row2);
         layer.push(ks.row3);
         layer.push(ks.row4);
-        layer.push(ks.row5[zones[1].value])
+        layer.push(ks.row5[zones[1].value]);
         keymap.push(layer);
     }
 
