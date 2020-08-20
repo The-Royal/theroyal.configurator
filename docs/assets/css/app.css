@@ -16,7 +16,7 @@ body {
   vertical-align: top;
   position: relative;
   box-sizing: border-box;
-  border: 1px solid #808080;
+  border: 4px solid #bdbdbd;
 }
 
 .error {
